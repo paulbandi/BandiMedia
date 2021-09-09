@@ -1,0 +1,31 @@
+<h1 id="tableLabel">Marketers</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<button class="btn btn-primary" [routerLink]="['/marketer-add']">Add Marketer</button>
+
+<p *ngIf="!marketers"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="marketers">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume</th>
+      <th>Skills</th>
+      <th>Email</th>
+      <th>Telefon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let marketer of marketers">
+      <td>{{ marketer.id }}</td>
+      <td>{{ marketer.nume }}</td>
+      <td>{{ marketer.skills }}</td>
+      <td>{{ marketer.email }}</td>
+      <td>{{ marketer.telefon }}</td>
+
+      <td><button class="btn btn-primary" (click)="deleteMarketer(marketer)">delete</button></td>
+      <td><a href="/marketer-update?id={{marketer.id}}" class="btn btn-primary">update</a></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,25 @@
+<div *ngIf="marketer">
+
+  <h1 id="tableLabel">Update marketer</h1>
+
+  Nume:
+  <br />
+  <input [(ngModel)]="marketer.nume" />
+  <br />
+  Skills:
+  <br />
+  <input [(ngModel)]="marketer.skills" />
+  <br />
+  Email:
+  <br />
+  <input [(ngModel)]="marketer.email" />
+  <br />
+  Telefon:
+  <br />
+  <input [(ngModel)]="marketer.telefon" />
+  <br />
+
+
+
+  <button class="btn btn-primary" (click)="saveMarketer()">Save updates</button> <br /> <br />
+</div>

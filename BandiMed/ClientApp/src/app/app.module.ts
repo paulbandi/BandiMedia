@@ -21,6 +21,9 @@ import { ManagerUpdateComponent } from './manager/manager-update.component';
 import { DesignerComponent } from './designer/designer.component';
 import { DesignerAddComponent } from './designer/designer-add.component';
 import { DesignerUpdateComponent } from './designer/designer-update.component';
+import { MarketerComponent } from './marketers/marketer.component';
+import { MarketerAddComponent } from './marketers/marketer-add.component';
+import { MarketerUpdateComponent } from './marketers/marketer-update.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { DesignerUpdateComponent } from './designer/designer-update.component';
     ManagerUpdateComponent,
     DesignerComponent,
     DesignerAddComponent,
-    DesignerUpdateComponent
+    DesignerUpdateComponent,
+    MarketerComponent,
+    MarketerAddComponent,
+    MarketerUpdateComponent
     
   ],
   imports: [
@@ -63,6 +69,9 @@ import { DesignerUpdateComponent } from './designer/designer-update.component';
       { path: 'designers', component: DesignerComponent },
       { path: 'designer-add', component: DesignerAddComponent },
       { path: 'designer-update', component: DesignerUpdateComponent },
+      { path: 'marketers', component: MarketerComponent },
+      { path: 'marketer-add', component: MarketerAddComponent },
+      { path: 'marketer-update', component: MarketerUpdateComponent },
 ], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],

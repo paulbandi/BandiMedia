@@ -21,5 +21,7 @@ namespace BandiMed.Data
         public DbSet<BandiMed.Models.Manager> Manager { get; set; }
 
         public DbSet<BandiMed.Models.Designer> Designer { get; set; }
+
+        public DbSet<BandiMed.Models.Marketer> Marketer { get; set; }
     }
 }
