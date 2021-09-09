@@ -15,5 +15,7 @@ namespace BandiMed.Data
         }
 
         public DbSet<BandiMed.Models.Client> Client { get; set; }
+
+        public DbSet<BandiMed.Models.PR> PR { get; set; }
     }
 }

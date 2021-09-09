@@ -1,0 +1,28 @@
+<div *ngIf="client">
+
+  <h1 id="tableLabel">Update client</h1>
+
+  Nume:
+  <br />
+  <input [(ngModel)]="client.nume" />
+  <br />
+  Prenume:
+  <br />
+  <input [(ngModel)]="client.prenume" />
+  <br />
+  Locatie:
+  <br />
+  <input [(ngModel)]="client.locatia" />
+  <br />
+  Email:
+  <br />
+  <input [(ngModel)]="client.email" />
+  <br />
+  Telefon:
+  <br />
+  <input [(ngModel)]="client.telefon" />
+  <br />
+
+
+  <button class="btn btn-primary" (click)="saveClient()">Save updates</button> <br /> <br />
+</div>

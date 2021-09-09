@@ -1,0 +1,25 @@
+<div *ngIf="pr">
+
+  <h1 id="tableLabel">Update PR</h1>
+
+  Nume:
+  <br />
+  <input [(ngModel)]="pr.nume" />
+  <br />
+  Varsta:
+  <br />
+  <input [(ngModel)]="pr.prenume" />
+  <br />
+  Experienta:
+  <br />
+  <input [(ngModel)]="pr.experienta" />
+  <br />
+  Skill:
+  <br />
+  <input [(ngModel)]="pr.skill" />
+  <br />
+
+
+
+  <button class="btn btn-primary" (click)="savePR()">Save updates</button> <br /> <br />
+</div>

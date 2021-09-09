@@ -12,47 +12,47 @@ namespace BandiMed.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClientsController : ControllerBase
+    public class PRsController : ControllerBase
     {
         private readonly BandiMedContext _context;
 
-        public ClientsController(BandiMedContext context)
+        public PRsController(BandiMedContext context)
         {
             _context = context;
         }
 
         // GET: bees / Customers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Client>>> GetClient()
+        public async Task<ActionResult<IEnumerable<PR>>> GetPR()
         {
-            return await _context.Client.ToListAsync();
+            return await _context.PR.ToListAsync();
         }
 
         // GET: api / Clienti / 5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Client>> GetClient(Guid id)
+        public async Task<ActionResult<PR>> GetPR(Guid id)
         {
-            var client = await _context.Client.FindAsync(id);
+            var pr = await _context.PR.FindAsync(id);
 
-            if (client == null)
+            if (pr == null)
             {
                 return NotFound();
             }
 
-            return client;
+            return pr;
         }
 
         // PUT: api / Clienti / 5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutClient(Guid id, Client client)
+        public async Task<IActionResult> PutPR(Guid id, PR pr)
         {
-            if (id != client.ID)
+            if (id != pr.ID)
             {
                 return BadRequest();
             }
 
-            _context.Entry(client).State = EntityState.Modified;
+            _context.Entry(pr).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace BandiMed.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClientExists(id))
+                if (!PRExists(id))
                 {
                     return NotFound();
                 }
@@ -76,14 +76,14 @@ namespace BandiMed.Controllers
         // POST: bees / Customers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task PostClient([FromBody] Client client)
+        public async Task PostPR([FromBody] PR pr)
         {
-            if (client.ID == Guid.Empty)
+            if (pr.ID == Guid.Empty)
             {
-                client.ID = Guid.NewGuid();
+                pr.ID = Guid.NewGuid();
             }
 
-            _context.Client.Add(client);
+            _context.PR.Add(pr);
             await _context.SaveChangesAsync();
 
             //return CreatedAtAction("GetClient", new { id = client.ID }, client);
@@ -91,18 +91,18 @@ namespace BandiMed.Controllers
 
         // DELETE: api / Clienti / 5
         [HttpDelete("{id}")]
-        public async Task DeleteClient(Guid id)
+        public async Task DeletePR(Guid id)
         {
-            Client client = await _context.Client.FindAsync(id);
-            if (client != null)
+            PR pr = await _context.PR.FindAsync(id);
+            if (pr != null)
             {
-                _context.Client.Remove(client);
+                _context.PR.Remove(pr);
                 await _context.SaveChangesAsync();
             }
 
         }
 
-        private bool ClientExists(Guid id)
+        private bool PRExists(Guid id)
         {
             return _context.Client.Any(e => e.ID == id);
         }
