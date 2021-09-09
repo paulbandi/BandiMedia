@@ -15,6 +15,12 @@ import { ClientUpdateComponent } from './client/client-update.component';
 import { PRComponent } from './PR/PR.component';
 import { PRAddComponent } from './PR/PR-add.component';
 import { PRUpdateComponent } from './PR/PR-update.component';
+import { ManagerComponent } from './manager/manager.component';
+import { ManagerAddComponent } from './manager/manager-add.component';
+import { ManagerUpdateComponent } from './manager/manager-update.component';
+import { DesignerComponent } from './designer/designer.component';
+import { DesignerAddComponent } from './designer/designer-add.component';
+import { DesignerUpdateComponent } from './designer/designer-update.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { PRUpdateComponent } from './PR/PR-update.component';
     ClientUpdateComponent,
     PRComponent,
     PRAddComponent,
-    PRUpdateComponent
+    PRUpdateComponent,
+    ManagerComponent,
+    ManagerAddComponent,
+    ManagerUpdateComponent,
+    DesignerComponent,
+    DesignerAddComponent,
+    DesignerUpdateComponent
     
   ],
   imports: [
@@ -45,6 +57,12 @@ import { PRUpdateComponent } from './PR/PR-update.component';
       { path: 'prs', component: PRComponent },
       { path: 'PR-add', component: PRAddComponent },
       { path: 'PR-update', component: PRUpdateComponent },
+      { path: 'managers', component: ManagerComponent },
+      { path: 'manager-add', component: ManagerAddComponent },
+      { path: 'manager-update', component: ManagerUpdateComponent },
+      { path: 'designers', component: DesignerComponent },
+      { path: 'designer-add', component: DesignerAddComponent },
+      { path: 'designer-update', component: DesignerUpdateComponent },
 ], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],

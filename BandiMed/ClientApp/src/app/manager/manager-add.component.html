@@ -1,0 +1,25 @@
+<div *ngIf="manager">
+
+  <h1 id="tableLabel">Add Managers</h1>
+
+  Nume:
+  <br />
+  <input [(ngModel)]="manager.nume" />
+  <br />
+  Experienta:
+  <br />
+  <input [(ngModel)]="manager.experienta" />
+  <br />
+  Email:
+  <br />
+  <input [(ngModel)]="manager.email" />
+  <br />
+  Telefon:
+  <br />
+  <input [(ngModel)]="manager.telefon" />
+  <br />
+
+
+  <button class="btn btn-primary" (click)="saveManager()">Save Manager</button>
+
+</div>

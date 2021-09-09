@@ -4,14 +4,16 @@ using BandiMed.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BandiMed.Migrations
 {
     [DbContext(typeof(BandiMedContext))]
-    partial class BandiMedContextModelSnapshot : ModelSnapshot
+    [Migration("20210909211243_ManagerCreate")]
+    partial class ManagerCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,29 +45,6 @@ namespace BandiMed.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Client");
-                });
-
-            modelBuilder.Entity("BandiMed.Models.Designer", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Bio")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nume")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Skill")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Designer");
                 });
 
             modelBuilder.Entity("BandiMed.Models.Manager", b =>

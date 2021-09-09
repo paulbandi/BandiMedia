@@ -1,0 +1,25 @@
+<div *ngIf="designer">
+
+  <h1 id="tableLabel">Add Designers</h1>
+
+  Nume:
+  <br />
+  <input [(ngModel)]="designer.nume" />
+  <br />
+  Bio:
+  <br />
+  <input [(ngModel)]="designer.bio" />
+  <br />
+  Skills:
+  <br />
+  <input [(ngModel)]="designer.skill" />
+  <br />
+  Email:
+  <br />
+  <input [(ngModel)]="designer.email" />
+  <br />
+
+
+  <button class="btn btn-primary" (click)="saveDesigner()">Save Designer</button>
+
+</div>
