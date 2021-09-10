@@ -1,15 +1,12 @@
 <h1 id="tableLabel">Clienti</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
-
-<button class="btn btn-primary" [routerLink]="['/client-add']">Add clienti</button>
+<button class="btn btn-primary" [routerLink]="['/client-add']">Adauga client</button>
 
 <p *ngIf="!clienti"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="clienti">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nume</th>
       <th>Prenume</th>
       <th>Locatia</th>
@@ -19,7 +16,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let client of clienti">
-      <td>{{ client.id }}</td>
       <td>{{ client.nume }}</td>
       <td>{{ client.prenume }}</td>
       <td>{{ client.locatia }}</td>

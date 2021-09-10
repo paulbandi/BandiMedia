@@ -1,15 +1,14 @@
 <h1 id="tableLabel">Marketers</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Un marketer bun nu are nevoie să manipuleze clientul pentru a cumpăra un produs, produsul se vinde singur, iar marketerul îl promovează efectiv, ajungând la un public interesat și gata de acțiune.</p>
 
-<button class="btn btn-primary" [routerLink]="['/marketer-add']">Add Marketer</button>
+<button class="btn btn-primary" [routerLink]="['/marketer-add']">Adauga Marketer</button>
 
 <p *ngIf="!marketers"><em>Loading...</em></p>
-
+<br />
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="marketers">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nume</th>
       <th>Skills</th>
       <th>Email</th>
@@ -18,7 +17,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let marketer of marketers">
-      <td>{{ marketer.id }}</td>
       <td>{{ marketer.nume }}</td>
       <td>{{ marketer.skills }}</td>
       <td>{{ marketer.email }}</td>

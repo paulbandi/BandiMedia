@@ -1,15 +1,14 @@
 <h1 id="tableLabel">Managers</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Managerul selectează personalul cu care va lucra pentru îndeplinirea sarcinilor planificate, gestionează întregul proces și controlează fiecare aspect al planului de activitate.</p>
 
-<button class="btn btn-primary" [routerLink]="['/manager-add']">Add Manager</button>
+<button class="btn btn-primary" [routerLink]="['/manager-add']">Adauga Manager</button>
 
 <p *ngIf="!managers"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="managers">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nume</th>
       <th>Experienta</th>
       <th>Email</th>
@@ -18,7 +17,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let manager of managers">
-      <td>{{ manager.id }}</td>
       <td>{{ manager.nume }}</td>
       <td>{{ manager.experienta }}</td>
       <td>{{ manager.email }}</td>

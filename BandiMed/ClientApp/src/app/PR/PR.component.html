@@ -1,15 +1,16 @@
 <h1 id="tableLabel">PR</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
-
-<button class="btn btn-primary" [routerLink]="['/PR-add']">Add PR</button>
-
+<p>
+  PRul se ocupă de imaginea firmei, de relația dintre aceasta și publicul ei, de felul în care ajung mesajele la public și analizează felul în care sunt percepute acestea. Pe scurt, PRul are grijă de reputația companiei.<br />
+  Departamentul de PR este cel care lucrează împreună cu celelalte departamente astfel încât imaginea companiei să fie una pozitivă și relația acesteia cu publicul să fie una cât mai înfloritoare.
+</p>
+<button class="btn btn-primary" [routerLink]="['/PR-add']">Adaugă PR</button>
+<br />
 <p *ngIf="!prs"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="prs">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nume</th>
       <th>Varsta</th>
       <th>Experienta</th>
@@ -18,7 +19,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let pr of prs">
-      <td>{{ pr.id }}</td>
       <td>{{ pr.nume }}</td>
       <td>{{ pr.varsta }}</td>
       <td>{{ pr.experienta }}</td>

@@ -1,6 +1,6 @@
 <h1 id="tableLabel">Designers</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Un bun designer are răbdare atunci când creează şi concepe un design unic, care să se potrivească cu cerinţele clientului. Printre cele mai importante caracteristici ale unui designer se numără şi posibilitatea vizualizării, creării şi a punerii în practică de noi idei</p>
 
 <button class="btn btn-primary" [routerLink]="['/designer-add']">Add Designer</button>
 
@@ -9,7 +9,6 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="designers">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nume</th>
       <th>Bio</th>
       <th>Skill</th>
@@ -18,7 +17,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let designer of designers">
-      <td>{{ designer.id }}</td>
       <td>{{ designer.nume }}</td>
       <td>{{ designer.bio }}</td>
       <td>{{ designer.skill }}</td>
